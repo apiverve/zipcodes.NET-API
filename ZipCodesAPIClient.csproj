@@ -1,38 +1,69 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <Nullable>enable</Nullable>
+    <TargetFrameworks>net20;net35;net40;net45;netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>APIVerve.API.ZipCodes</Title>
-    <Version>1.0.0</Version>
+    <Version>1.0.5</Version>
     <Authors>APIVerve</Authors>
     <Company>APIVerve</Company>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <IncludeContentInPack>true</IncludeContentInPack>
+
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
-    <PackageProjectUrl>https://apiverve.com/marketplace/api/zipcodes</PackageProjectUrl>
+    <PackageProjectUrl>https://apiverve.com/?utm_source=nuget</PackageProjectUrl>
     <SignAssembly>False</SignAssembly>
     <Description>Zip Codes is a simple tool for looking up zip codes. It returns the city, state, and more of a zip code.</Description>
-    <RepositoryUrl>https://github.com/apiverve/zipcodes-NET</RepositoryUrl>
+    <RepositoryUrl>https://github.com/apiverve/zipcodes.NET-API</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>zip codes; zip code lookup; zip codes api; zip codes tool; zip codes software; zip codes service; zip codes library; zip codes sdk; zip codes code; zip codes script; zip codes program; zip codes application; zip codes app; zip codes utility; zip codes helper; zip codes helper tool; zip codes helper software; zip codes helper service; zip codes helper library; zip codes helper sdk; zip codes helper code; zip codes helper script; zip codes helper program; zip codes helper application; zip codes helper app; zip codes helper tool; zip codes helper utility; zip codes helper</PackageTags>
+    <PackageTags>zip codes; zip code lookup; zip codes api; zip codes tool; zip codes software</PackageTags>
     <Copyright>©2024 APIVerve. All Rights Reserved</Copyright>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <PackageIcon>favicon@128.png</PackageIcon>
+    <BaseOutputPath>.\bin</BaseOutputPath>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <PackageId>APIVerve.API.ZipCodes</PackageId>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <None Remove="LICENSE" />
+    <None Remove="Readme.md" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="LICENSE">
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\Media\favicon@128.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Update="Readme.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>
