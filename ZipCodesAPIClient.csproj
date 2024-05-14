@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>APIVerve.API.ZipCodes</Title>
+    <Version>1.0.0</Version>
+    <Authors>APIVerve</Authors>
+    <Company>APIVerve</Company>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <PackageProjectUrl>https://apiverve.com/marketplace/api/zipcodes</PackageProjectUrl>
+    <SignAssembly>False</SignAssembly>
+    <Description>Zip Codes is a simple tool for looking up zip codes. It returns the city, state, and more of a zip code.</Description>
+    <RepositoryUrl>https://github.com/apiverve/zipcodes-NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>zip codes; zip code lookup; zip codes api; zip codes tool; zip codes software; zip codes service; zip codes library; zip codes sdk; zip codes code; zip codes script; zip codes program; zip codes application; zip codes app; zip codes utility; zip codes helper; zip codes helper tool; zip codes helper software; zip codes helper service; zip codes helper library; zip codes helper sdk; zip codes helper code; zip codes helper script; zip codes helper program; zip codes helper application; zip codes helper app; zip codes helper tool; zip codes helper utility; zip codes helper</PackageTags>
+    <Copyright>©2024 APIVerve. All Rights Reserved</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
