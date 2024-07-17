@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class foundCities
+public class data
 {
     [JsonProperty("zipcode")]
     public string zipcode { get; set; }
@@ -23,16 +23,6 @@ public class foundCities
 
     [JsonProperty("state")]
     public string state { get; set; }
-
-}
-
-public class data
-{
-    [JsonProperty("search")]
-    public string search { get; set; }
-
-    [JsonProperty("foundCities")]
-    public foundCities[] foundCities { get; set; }
 
 }
 
