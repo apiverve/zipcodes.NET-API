@@ -5,8 +5,7 @@ using System.Text;
 namespace APIVerve
 {
     public class zipcodesQueryOptions {
-public string city { get; set; }
-public string state { get; set; }
+public string zip { get; set; }
 }
 
 }
