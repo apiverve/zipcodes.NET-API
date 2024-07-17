@@ -1,13 +1,13 @@
-Zip Codes API
+Zip Codes Lookup API
 ============
 
-Zip Codes is a simple tool for looking up zip codes. It returns the city, state, and more of a zip code.
+Zip Codes Lookup is a simple tool for looking up the zip codes of a city. It returns the zip codes of the city.
 
 ![Build Status](https://img.shields.io/badge/build-passing-green)
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [Zip Codes API](https://apiverve.com/marketplace/api/zipcodes)
+This is a .NET Wrapper for the [Zip Codes Lookup API](https://apiverve.com/marketplace/api/zipcodes)
 
 ---
 
@@ -15,17 +15,17 @@ This is a .NET Wrapper for the [Zip Codes API](https://apiverve.com/marketplace/
 
 Using the .NET CLI:
 ```
-dotnet add package APIVerve.API.ZipCodes
+dotnet add package APIVerve.API.ZipCodesLookup
 ```
 
 Using the Package Manager:
 ```
-nuget install APIVerve.API.ZipCodes
+nuget install APIVerve.API.ZipCodesLookup
 ```
 
 Using the Package Manager Console:
 ```
-Install-Package APIVerve.API.ZipCodes
+Install-Package APIVerve.API.ZipCodesLookup
 ```
 
 From within Visual Studio:
@@ -33,8 +33,8 @@ From within Visual Studio:
 1. Open the Solution Explorer.
 2. Right-click on a project within your solution.
 3. Click on Manage NuGet Packages...
-4. Click on the Browse tab and search for "APIVerve.API.ZipCodes".
-5. Click on the APIVerve.API.ZipCodes package, select the appropriate version in the right-tab and click Install.
+4. Click on the Browse tab and search for "APIVerve.API.ZipCodesLookup".
+5. Click on the APIVerve.API.ZipCodesLookup package, select the appropriate version in the right-tab and click Install.
 
 
 ---
@@ -48,17 +48,17 @@ You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ## Usage
 
-The Zip Codes API documentation is found here: [https://docs.apiverve.com/api/zipcodes](https://docs.apiverve.com/api/zipcodes).  
+The Zip Codes Lookup API documentation is found here: [https://docs.apiverve.com/api/zipcodes](https://docs.apiverve.com/api/zipcodes).  
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-Zip Codes API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+Zip Codes Lookup API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```
 // Create an instance of the API client
-var apiClient = new ZipCodesAPIClient("[YOUR_API_KEY]", true);
+var apiClient = new ZipCodesLookupAPIClient("[YOUR_API_KEY]", true);
 ```
 
 ---
@@ -71,8 +71,7 @@ Using the API client, you can perform requests to the API.
 
 ```
 var queryOptions = new zipcodesQueryOptions {
-  city = "San Francisco",
-  state = "CA"
+  zip = "64082"
 };
 ```
 
@@ -95,225 +94,12 @@ if(response.error != null) {
   "status": "ok",
   "error": null,
   "data": {
-    "search": "San Francisco",
-    "foundCities": [
-      {
-        "zipcode": "94102",
-        "state_abbr": "CA",
-        "latitude": "37.779329",
-        "longitude": "-122.41915",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94103",
-        "state_abbr": "CA",
-        "latitude": "37.772329",
-        "longitude": "-122.41087",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94104",
-        "state_abbr": "CA",
-        "latitude": "37.791728",
-        "longitude": "-122.40190",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94105",
-        "state_abbr": "CA",
-        "latitude": "37.789228",
-        "longitude": "-122.39570",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94107",
-        "state_abbr": "CA",
-        "latitude": "37.766529",
-        "longitude": "-122.39577",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94108",
-        "state_abbr": "CA",
-        "latitude": "37.792678",
-        "longitude": "-122.40793",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94109",
-        "state_abbr": "CA",
-        "latitude": "37.792778",
-        "longitude": "-122.42188",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94110",
-        "state_abbr": "CA",
-        "latitude": "37.748730",
-        "longitude": "-122.41545",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94111",
-        "state_abbr": "CA",
-        "latitude": "37.798228",
-        "longitude": "-122.40027",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94112",
-        "state_abbr": "CA",
-        "latitude": "37.720931",
-        "longitude": "-122.44241",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94114",
-        "state_abbr": "CA",
-        "latitude": "37.758434",
-        "longitude": "-122.43512",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94115",
-        "state_abbr": "CA",
-        "latitude": "37.786129",
-        "longitude": "-122.43736",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94116",
-        "state_abbr": "CA",
-        "latitude": "37.743381",
-        "longitude": "-122.48578",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94117",
-        "state_abbr": "CA",
-        "latitude": "37.770937",
-        "longitude": "-122.44276",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94118",
-        "state_abbr": "CA",
-        "latitude": "37.782029",
-        "longitude": "-122.46158",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94121",
-        "state_abbr": "CA",
-        "latitude": "37.778729",
-        "longitude": "-122.49265",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94122",
-        "state_abbr": "CA",
-        "latitude": "37.758380",
-        "longitude": "-122.48478",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94123",
-        "state_abbr": "CA",
-        "latitude": "37.801028",
-        "longitude": "-122.43836",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94124",
-        "state_abbr": "CA",
-        "latitude": "37.732797",
-        "longitude": "-122.39348",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94127",
-        "state_abbr": "CA",
-        "latitude": "37.734964",
-        "longitude": "-122.45970",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94128",
-        "state_abbr": "CA",
-        "latitude": "37.621964",
-        "longitude": "-122.39534",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94129",
-        "state_abbr": "CA",
-        "latitude": "37.799840",
-        "longitude": "-122.46167",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94130",
-        "state_abbr": "CA",
-        "latitude": "37.819423",
-        "longitude": "-122.36966",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94131",
-        "state_abbr": "CA",
-        "latitude": "37.741797",
-        "longitude": "-122.43780",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94132",
-        "state_abbr": "CA",
-        "latitude": "37.724231",
-        "longitude": "-122.47958",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94133",
-        "state_abbr": "CA",
-        "latitude": "37.801878",
-        "longitude": "-122.41018",
-        "city": "San Francisco",
-        "state": "California"
-      },
-      {
-        "zipcode": "94134",
-        "state_abbr": "CA",
-        "latitude": "37.719581",
-        "longitude": "-122.41085",
-        "city": "San Francisco",
-        "state": "California"
-      }
-    ]
+    "zipcode": "64082",
+    "state_abbr": "MO",
+    "latitude": "38.850243",
+    "longitude": "-94.39570",
+    "city": "Lees Summit",
+    "state": "Missouri"
   }
 }
 ```
