@@ -70,7 +70,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-var queryOptions = new zipcodesQueryOptions {
+var queryOptions = new ZipCodesLookupQueryOptions {
   zip = "64082"
 };
 ```
@@ -100,7 +100,8 @@ if(response.error != null) {
     "longitude": "-94.39570",
     "city": "Lees Summit",
     "state": "Missouri"
-  }
+  },
+  "code": 200
 }
 ```
 
