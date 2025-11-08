@@ -4,42 +4,43 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class data
-{
-    [JsonProperty("zipcode")]
-    public string zipcode { get; set; }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("zipcode")]
+        public string Zipcode { get; set; }
 
-    [JsonProperty("state_abbr")]
-    public string stateabbr { get; set; }
+        [JsonProperty("state_abbr")]
+        public string Stateabbr { get; set; }
 
-    [JsonProperty("latitude")]
-    public string latitude { get; set; }
+        [JsonProperty("latitude")]
+        public string Latitude { get; set; }
 
-    [JsonProperty("longitude")]
-    public string longitude { get; set; }
+        [JsonProperty("longitude")]
+        public string Longitude { get; set; }
 
-    [JsonProperty("city")]
-    public string city { get; set; }
+        [JsonProperty("city")]
+        public string City { get; set; }
 
-    [JsonProperty("state")]
-    public string state { get; set; }
+        [JsonProperty("state")]
+        public string State { get; set; }
 
-}
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("error")]
-    public object error { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
